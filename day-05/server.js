@@ -1,15 +1,22 @@
+// function init(){
+//     function name(){
+//         console.log('name');
+//     }
+//     name();
+// };
+// init();
 
+//Task 1
 
-function init(){
-    function name(){
-        console.log('name');
-    }
-    name();
-};
-init();
+const endpoint = require('./another');
 
-function main(){
+function main() {
     console.log('Hello, World!');
+    console.log(endpoint());
 }
 
 main();
+
+
+
+
