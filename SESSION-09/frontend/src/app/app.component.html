@@ -1,0 +1,15 @@
+<div class="w-[80%] h-screen m-auto flex flex-col justify-center items-center">
+
+    <div class="card">
+        {{data?.message}}
+    </div>
+
+    <div class="card flex gap-2">
+        <input type="text" class="w-[300px] border-none bg-gray-100 h-[40px] rounded-sm px-2" [(ngModel)]="message">
+        <button (click)="sendMessage()" class="bg-orange-600 text-white h-[40px] w-[100px] rounded-sm">Send</button>
+    </div> 
+</div>
+
+
+
+<router-outlet />

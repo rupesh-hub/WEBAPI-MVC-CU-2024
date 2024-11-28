@@ -17,14 +17,14 @@ export class AppComponent implements OnInit {
 
   constructor(private http: HttpClient) {}
 
-  private connectToBackend(): Observable<string | HttpErrorResponse> {
-    return this.http.get<string>(this.url);
+  private connectToBackend(): Observable<any | HttpErrorResponse> {
+    return this.http.get<any>(this.url);
   }
 
   ngOnInit(): void {
     this.connectToBackend().subscribe({
-      next: (res) => {
-        this.response = res;
+      next: (res:any) => {
+        this.response = res.messages;
       },
     });
   }
